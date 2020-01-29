@@ -40,6 +40,7 @@ footer .cf .cf_f{
     padding: 10px 0;
     border:solid 1px #999;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 footer .cf .top{
@@ -48,4 +49,5 @@ footer .cf .top{
     text-decoration: none;
     /* background-color: rebeccapurple; */
     margin-bottom: 10px;
+    overflow: hidden;
 }
