@@ -1,53 +1,287 @@
 *{
     padding: 0;
     margin: 0;
+}
+html{
+    height:100%;
+    width: 100%;
+    font-family: poppin,Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
+}    
+body{
+    height:100%;
+    width: 100%;
+    margin:0px;
+    padding:0px;
+    overflow-x: hidden;
+}
+/* 登录界面 */
+.login{
+    height:100%;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 100px;
+    box-sizing: border-box;
+}
+.loginlogo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    width: 180px;
+    overflow: hidden;
+}
+.loginlogo-img:hover{
+    opacity: 1;
+}
+.loginlogo img{
+    height: 30px;
+    opacity: .3;
+    transition: .5s;
+}
+.loginmain{
+    z-index: 999;
+    width: 300px;
+    height: 200px;
+    background-image: url(../img/2.gif);
+    background-position-x: -565px;
+    background-position-y: -150px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    margin-top: 150px;
+    box-shadow: rgba(160, 136, 136) 2px 5px 10px;
+}
+.loginmain input{
+    padding: 5px 10px;
+    margin-top: 10px;
+    outline-color: rgb(73, 214, 219);
+    opacity: .6;
+}
+.loginmain input:focus {
+    opacity: 1;
+}
+.loginmain button{
+    cursor: pointer;
+    padding: 2px 2px;
+}
+.loginmain button:focus{
+    outline:none;
+}
+#i1{
+    color: rgb(73, 214, 219);
+}
+#i2{
+    color: #999;
+}
+.rad{
+    height: 50px;
+    width: 50px;
+    border: solid 1px #999;
+    border-radius: 50%;
+    text-align:center;
+    overflow: hidden;
+}
+.bt1{
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 20px;
+    line-height: 20px;
+    transition: .5s;
+    background-color: rgb(73, 214, 219,0.8)
+}
+.bt1:hover{
+    background-color: rgb(73, 214, 219);
+}
+.img1{
+    height: 50px;  
+}
+.login-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.35);
+    z-index: -1;
+}
+.loginbg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .6;
+    overflow: hidden;
+    background-position: center;
+    filter: blur(15px);
+    background-image: url(../img/11.jpg);
+}
+
+.homepage{
+    display: none;
+}
+.headtit{
+    width: 100%;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.2);
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    z-index: -999;
+    background-image: url('../img/a.jpg');
+    background-size: cover;
+}
+h1{
+    font-weight: 500;
+    color: #fff;
+    letter-spacing:8px;
+    animation: rotat 2s ease;
+}
+h1>i:first-child{
+    color: red;
+    letter-spacing:2px;
+    animation: rotat 2s ease;
+}
+@keyframes rotat{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.cool{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+.curry{
+    height: 320px;
+    width: 320px;
+    transform-style: preserve-3d;
+    animation: rotating 4s ease;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+}
+.curry div{
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    opacity: 0.8;
+    overflow: hidden;
+    transition: all 1.2s;
+}
+.curry div img{
+    width: 100%;
+}
+.top{
+    transform: rotateX(90deg) translateZ(160px);
+}
+.face{
+    transform: translateZ(160px);
+}
+.back{
+    transform: translateZ(-160px);
+}
+.bottom{
+    transform: rotateX(90deg) translateZ(-160px);
+}
+.left{
+    transform: rotateY(90deg) translateZ(160px);
+}
+.right{
+    transform: rotateY(90deg) translateZ(-160px);
+}
+.curry:hover{
+    cursor: pointer;
+}
+.curry:hover .top{
+    transform: rotateX(90deg) translateZ(320px);
+}
+.curry:hover .face{
+    transform: translateZ(320px);
+}
+.curry:hover .back{
+    transform: translateZ(-320px);
+}
+.curry:hover .bottom{
+    transform: rotateX(90deg) translateZ(-320px);
+}
+.curry:hover .left{
+    transform: rotateY(90deg) translateZ(320px);
+}
+.curry:hover .right{
+    transform: rotateY(90deg) translateZ(-320px);
+}
+@keyframes rotating{
+    from{
+        transform: rotateX(0) rotateY(0);
+    }
+    to{
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+.prompt{
+    height: 50px;
+    width: 200px;
+    list-style: none;
+    background-color: aqua;
+}
+.prompt p{
+    line-height: 50px;
     text-align: center;
 }
-
-body{
-    background: #f5f5f5;
+.jt{
+    border-width: 40px 0 40px 50px;
+    border-style: solid;
+    border-color: transparent transparent transparent aqua;
+}
+.fixed{
+    animation: myprompt 4s ease;
+    position: fixed;
+    left: -200px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    transition: 1.5s;
+}
+@keyframes myprompt{
+    0%{
+        left: -200px;
+        opacity: 0;
+    }
+    50%{
+        left: 0;
+        /* color: #fff; */
+        opacity: 0.5;
+    }
+    100%{
+        left: -200px;
+        opacity: 1;
+    }
+}
+.fixed:hover{
+    left: 0;
+    cursor: pointer;
+    color: #fff;
 }
 
-header h1{
-    color: #000;
-}
-
-footer{
-    width: 80%;
-    /* background-color: red; */
-    margin: auto;
-}
-
-footer img{
-    height: 100%;
-}
-
-footer h2{
-    font-size: 22px;
-    font-weight: 200;
-    line-height: 58px;
-    color: #333;
-}
-footer .cf{
-    width: 100%;
-}
-
-footer .cf .cf_f{
-    float: left;
-    height: 210px;
-    width: 50%;
-    background-color: #fff;
-    padding: 10px 0;
-    border:solid 1px #999;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-footer .cf .top{
-    height: 85%;
-    width: 100%;
-    text-decoration: none;
-    /* background-color: rebeccapurple; */
-    margin-bottom: 10px;
-    overflow: hidden;
-}
